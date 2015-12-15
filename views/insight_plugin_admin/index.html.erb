@@ -1,0 +1,13 @@
+<h1><%= _("Insight plugin settings") %></h1>
+
+<%= form_for(:environment) do |f| %>
+
+  <%= labelled_form_field _('Insight domain'), f.text_field(:insight_domain) %>
+
+  <%= labelled_form_field _('Insight Code'), f.text_field(:insight_code) %>
+
+  <% button_bar do %>
+    <%= submit_button(:save, c_('Save'), :cancel => {:controller => 'plugins', :action => 'index'}) %>
+  <% end %>
+
+<% end %>
